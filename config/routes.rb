@@ -16,6 +16,9 @@ Rails.application.routes.draw do
   get "users/:id/likes" => "users#likes"
 
 
+
+  get 'posts/yamada' => 'posts#yamada'
+
   get "posts/index" => "posts#index"
   get "posts/new" => "posts#new"
   get "posts/:id" => "posts#show"
@@ -24,7 +27,8 @@ Rails.application.routes.draw do
   post "posts/:id/update" => "posts#update"
   post "posts/:id/destroy" => "posts#destroy"
   
-  get "/" => "home#top"
+  # get "/" => "home#top"
+  root 'home#top'
   get "about" => "home#about"
   
 end

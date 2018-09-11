@@ -95,6 +95,8 @@ class UsersController < ApplicationController
     @likes = Like.where(user_id: @user.id)
   end
   
+
+  
   def eusure_correct_user
     if @current_user.id != params[:id].to_i
       flash[:notice] = "権限がありません"

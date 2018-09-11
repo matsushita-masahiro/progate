@@ -18,16 +18,18 @@ class PostsController < ApplicationController
   end
   
   def create
-    @post = Post.new(
+    list = params[:list]
+    logger.debug "List result = #{list}"
+    post = Post.new(
       content: params[:content],
       user_id: @current_user.id
       )
      
-    if @post.save
+    if post.save
       flash[:notice] = "新規投稿が成功しました"
       redirect_to("/posts/index")
     else
-      redirect_to("/posts/new")
+      render("/posts/new")
     end
     
   end
@@ -56,6 +58,11 @@ class PostsController < ApplicationController
     else
       render("posts/edit")
     end
+  end
+  
+  def yamada 
+    @users = User.all
+    @posts = Post.all.order(created_at: :desc)
   end
   
   def ensure_correct_user

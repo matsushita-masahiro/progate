@@ -1,4 +1,11 @@
 /* posts/index ================================ */
+.posts-heading {
+  font-weight: 300;
+  margin: 60px 0 20px;
+  font-size: 48px;
+  color: #bcc8d4;
+}
+
 .posts-index-item {
   padding: 20px 30px;
   background-color: white;
@@ -112,3 +119,30 @@
   font-size: 24px;
   opacity: 0.5;
 }
+
+.container-up {
+  width: 100%;
+  margin: 0px auto;
+  padding-left: 120px;
+  clear: both;
+}
+
+
+.container-p {
+  float: left;
+  width: 500px;
+  margin: 60px auto;
+  padding-left: 20px;
+  padding-right: 15px;
+  // clear: both;
+}
+
+.container-u {
+  float: left;
+  width: 500px;
+  margin: 60px auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  // clear: both;
+}
+
