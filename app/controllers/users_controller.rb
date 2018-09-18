@@ -66,6 +66,7 @@ class UsersController < ApplicationController
   end
   
   def login_form
+    # @user = User.new
   end
   
   def login
@@ -103,6 +104,5 @@ class UsersController < ApplicationController
       redirect_to("/users/index")
     end
   end
-  
   
 end

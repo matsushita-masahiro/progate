@@ -23,10 +23,10 @@
       <ul class="header-menus">
        <% if session[:user_id] %>
           <li>
-            <%= link_to("Login User :", "/users/#{session[:user_id]}") %>
+            <% user = User.find_by(id: session[:user_id]) %>
+            <%= link_to("Login User : #{user.name}", "/users/#{session[:user_id]}") %>
             <!-- コードを追加し、ログイン中のユーザーのidを表示してください -->
-            <!--<% user = User.find_by(id: session[:user_id]) %>-->
-            <%= session[:user_id]  %>
+            <!--<%= user.name  %>-->
           </li>   
           <li>
             <%= link_to("投稿一覧","/posts/index") %>
